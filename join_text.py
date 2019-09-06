@@ -23,4 +23,4 @@ for arquivo in arquivos:
 
 merge_file.close()
 
-print("--- {:.2f} seconds ---".format(time.time() - start_time))
+print("--- Finalized in {:.2f} seconds ---".format(time.time() - start_time))
