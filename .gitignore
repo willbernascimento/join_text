@@ -1,5 +1,6 @@
 cand_04/
 
+*.csv
 *.txt
 *.pdf
 *.xml
