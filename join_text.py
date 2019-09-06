@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os, time, argparse
+import os, time, argparse, sys
 
 # Create the parser
 parser = argparse.ArgumentParser(description='Descreve o programa')
@@ -14,6 +14,10 @@ parser.add_argument('--label', action = 'store', dest = 'label',
                            default = "merged", required = False,
                            help = 'O tipo de arquivo que quer concatenar')
 
+parser.add_argument('--override', action = 'store', dest = 'override',
+                           default = "No", required = False,
+                           help = 'O tipo de arquivo que quer concatenar')
+
 # Execute the parse_args() method
 arguments = parser.parse_args()
 
@@ -23,17 +27,24 @@ start_time = time.time()
 # name output file
 merged_text = arguments.label + arguments.type
 
+
+if os.path.exists(merged_text) and arguments.override == "No":
+    print("Já existe um arquivo com mesmo nome." + "\n" + "Saindo ...")
+    sys.exit()
+
+if os.path.exists(merged_text) and arguments.override == "Yes":
+    print("Overriding existing " + merged_text + " file... \n")
+    os.remove(merged_text)
+
 # list files to concatenate
 arquivos = []
 
 # search files by type
-
 for file in os.listdir(os.getcwd()):
     if file.endswith(arguments.type):
         arquivos.append(file)
 
 # open the output file
-
 merge_file = open(merged_text, "wb")
 
 for arquivo in arquivos:
