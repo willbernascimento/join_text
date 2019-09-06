@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os, shutil, time
 
 start_time = time.time()
@@ -5,18 +7,19 @@ start_time = time.time()
 # name output file
 merged_text = "merged.txt"
 
-# open the output file
-merge_file = open(merged_text, "wb")
-
 # list files to concatenate
 arquivos = []
 
-for file in os.listdir("./cand_04/"):
+for file in os.listdir(os.getcwd()):
     if file.endswith(".txt"):
         arquivos.append(file)
 
+# open the output file
+
+merge_file = open(merged_text, "wb")
+
 for arquivo in arquivos:
-    text_file = open("./cand_04/" + arquivo, "rb")
+    text_file = open("./" + arquivo, "rb")
     for line in text_file:
         merge_file.write(line)
     text_file.close()
