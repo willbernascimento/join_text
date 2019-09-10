@@ -54,13 +54,44 @@ $ sudo cp /pathTofile/join_text.py /usr/local/bin/
 I believe the script should work on these systems, but I have no deeper knowledge to configure this script on them. Feel free to develop your solutions.
 
 ## USAGE
+In the working directory replet of .txt files, all you need is:
+
+```bash
+$ join_text
+```
+
+The range of supported commands are in the table:
+
 | Arguments            | Description
 |----------------------|----------------------------------------------
 | -h, --help           | show this help message and exit
-| --type TYPE          | file type: .txt and .csv is working good
-| --label LABEL        | The output file name
-| --override OVERRIDE  | Remove existing file with same name as output file
-|----------------------|----------------------------------------------
+| --type TYPE          | file type: .txt and .csv is working good (default .txt)
+| --label LABEL        | The output file name (default merged.fileExtension)
+| --override OVERRIDE  | Remove existing file with same name as output file (default No)
+|                      |
+
+You can specify the file type
+
+```bash
+$ join_text --type ".csv"
+```
+
+or the name of output file
+
+```bash
+$ join_text --type ".csv" --label "myoutput.csv"
+```
+
+**OBS:**
+If there is a file with the same name as the exit label you chose, you must choose what to do.
+
+1. You can manually rename the file, delete it or move it.
+
+2. You can set the override option (This option permanently deletes the file in question.)
+
+```bash
+$ join_text --type ".csv" --label "myoutput.csv" --override "Yes"
+```
 
 ### Get help
 ```bash
