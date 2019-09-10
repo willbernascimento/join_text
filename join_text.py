@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-""" Concatenate multiples text files """
+""" Concatenate multiple text files """
 
 import os
 import time
