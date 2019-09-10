@@ -54,13 +54,13 @@ $ sudo cp /pathTofile/join_text.py /usr/local/bin/
 I believe the script should work on these systems, but I have no deeper knowledge to configure this script on them. Feel free to develop your solutions.
 
 ## USAGE
-
-----------------------:----------------------------------------------
- -h, --help           | show this help message and exit
- --type TYPE          | file type: .txt and .csv is working good
- --label LABEL        | The output file name
- --override OVERRIDE  | Remove existing file with same name as output file
-----------------------:----------------------------------------------
+| Arguments            | Description
+|----------------------|----------------------------------------------
+| -h, --help           | show this help message and exit
+| --type TYPE          | file type: .txt and .csv is working good
+| --label LABEL        | The output file name
+| --override OVERRIDE  | Remove existing file with same name as output file
+|----------------------|----------------------------------------------
 
 ### Get help
 ```bash
