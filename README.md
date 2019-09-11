@@ -5,6 +5,12 @@ A simple program to concatenate multiple text files written in python 3.
 
 ## Linux
 
+### Download
+```bash
+git clone https://github.com/willbernascimento/join_text.git
+
+```
+
 On Linux there are many different ways to use this programing. You may need to make the file executable: 
 
 ```bash
@@ -50,11 +56,11 @@ If you want to make this program available globally to your system, you will nee
 $ sudo cp /pathTofile/join_text.py /usr/local/bin/
 ```
 
-## Windows and Mac OS
+## Windows and MacOSX
 I believe the script should work on these systems, but I have no deeper knowledge to configure this script on them. Feel free to develop your solutions.
 
 ## USAGE
-In the working directory replet of .txt files, all you need is:
+In the working directory replete of .txt files, all you need is:
 
 ```bash
 $ join_text
@@ -83,7 +89,7 @@ $ join_text --type ".csv" --label "myoutput.csv"
 ```
 
 **OBS:**
-If there is a file with the same name as the exit label you chose, you must choose what to do.
+If there is a file with the same name as the output file you chose, you must choose what to do.
 
 1. You can manually rename the file, delete it or move it.
 
