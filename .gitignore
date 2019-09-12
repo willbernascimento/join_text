@@ -6,3 +6,5 @@ venv/*
 *.pdf
 *.xml
 *.idea
+
+!requeriments.txt

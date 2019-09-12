@@ -5,7 +5,6 @@
 import os
 import time
 import argparse
-import sys
 from tqdm import tqdm
 
 # Create the parser

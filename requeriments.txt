@@ -1,0 +1,7 @@
+# Requeriments for running join_text script
+# You cand install all with pip
+
+os
+time
+argparse
+tqdm

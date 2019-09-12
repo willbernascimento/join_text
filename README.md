@@ -11,6 +11,14 @@ git clone https://github.com/willbernascimento/join_text.git
 
 ```
 
+### Dependencies
+Your can see requeriments on *requeriments.txt* file. If you use [pip](https://pip.pypa.io/en/latest/reference/pip_install/#id18):
+
+```bash
+pip install requeriments.txt
+
+```
+
 On Linux there are many different ways to use this programing. You may need to make the file executable: 
 
 ```bash
