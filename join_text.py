@@ -6,6 +6,7 @@ import os
 import time
 import argparse
 import sys
+from tqdm import tqdm
 
 # Create the parser
 parser = argparse.ArgumentParser(description='Program to join multiples text files')
@@ -53,7 +54,7 @@ for file in os.listdir(os.getcwd()):
 merge_file = open(merged_text, "wb")
 
 # write each line of the files in file list
-for file_item in file_list:
+for file_item in tqdm(file_list):
     text_file = open("./" + file_item, "rb")
     for line in text_file:
         merge_file.write(line)

@@ -1,5 +1,5 @@
 # join_text: Concatenate multiple text files
-A simple program to concatenate multiple text files written in python 3.
+A simple program to concatenate multiple text files written in Python 3.
 
 # INSTALL
 
