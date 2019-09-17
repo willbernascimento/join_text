@@ -3,7 +3,6 @@
 """ Concatenate multiple text files """
 
 import os
-import time
 import argparse
 from tqdm import tqdm
 
@@ -24,8 +23,6 @@ parser.add_argument('--override', action='store', dest='override', default="No",
 
 # Execute the parse_args() method
 arguments = parser.parse_args()
-
-start_time = time.time()
 
 # name output file
 merged_text = arguments.label + arguments.type
@@ -62,10 +59,3 @@ for file_item in tqdm(file_list):
 # close output file
 merge_file.close()
 
-# get the total time
-total_time = time.time() - start_time
-
-# print information about the precess
-print("Type file: {}".format(arguments.type) + "\n" +
-      "Files concatened: {}".format(len(file_list)) + "\n" +
-      "Time: {:.2f} seconds".format(total_time))
