@@ -1,4 +1,4 @@
-# join_text: Concatenate multiple text files
+# text_bind: Concatenate multiple text files
 A simple program to concatenate multiple text files written in Python 3.
 
 # INSTALL
@@ -7,7 +7,7 @@ A simple program to concatenate multiple text files written in Python 3.
 
 ### Download
 ```bash
-git clone https://github.com/willbernascimento/join_text.git
+git clone https://github.com/willbernascimento/text_bind.git
 
 ```
 
@@ -22,7 +22,7 @@ pip install requeriments.txt
 On Linux there are many different ways to use this programing. You may need to make the file executable: 
 
 ```bash
-$ chmod +x /pathTofile/join_text.py
+$ chmod +x /pathTofile/text_bind.py
 
 ```
 
@@ -32,7 +32,7 @@ You do not need root or sudo powers if you call this program in your user folder
 1. You can call the script using its address. For example:
 
 ```bash
-$ python /pathTofile/join_text.py
+$ python /pathTofile/text_bind.py
 
 ```
 
@@ -47,7 +47,7 @@ $ mkdir -p ~/bin/
 Copy the script file to your new folder
 
 ```bash
-$ cp /pathTofile/join_text.py ~/bin/join_text
+$ cp /pathTofile/text_bind.py ~/bin/text_bind
 
 ```
 
@@ -61,7 +61,7 @@ $ export PATH=~/bin:$PATH
 If you want to make this program available globally to your system, you will need root powers. You can place this program in several executable locations. An example would be:
 
 ```bash
-$ sudo cp /pathTofile/join_text.py /usr/local/bin/
+$ sudo cp /pathTofile/text_bind.py /usr/local/bin/
 ```
 
 ## Windows and MacOSX
@@ -71,7 +71,7 @@ I believe the script should work on these systems, but I have no deeper knowledg
 In the working directory replete of .txt files, all you need is:
 
 ```bash
-$ join_text
+$ text_bind
 ```
 
 The range of supported commands are in the table:
@@ -87,13 +87,13 @@ The range of supported commands are in the table:
 You can specify the file type
 
 ```bash
-$ join_text --type ".csv"
+$ text_bind --type ".csv"
 ```
 
 or the name of output file
 
 ```bash
-$ join_text --type ".csv" --label "myoutput.csv"
+$ text_bind --type ".csv" --label "myoutput.csv"
 ```
 
 **OBS:**
@@ -104,16 +104,15 @@ If there is a file with the same name as the output file you chose, you must cho
 2. You can set the override option (This option permanently deletes the file in question.)
 
 ```bash
-$ join_text --type ".csv" --label "myoutput.csv" --override "Yes"
+$ text_bind --type ".csv" --label "myoutput.csv" --override "Yes"
 ```
 
 ### Get help
 ```bash
-$ join_text -h
+$ text_bind -h
 ```
 
 
 ## DISCLAIMER
 This software is not warranted of any kind. Use at your own risk.
-
 

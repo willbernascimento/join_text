@@ -1,4 +1,4 @@
-# Requeriments for running join_text script
+# Requeriments for running text_bind script
 # You cand install all with pip
 
 tqdm==4.35.0
