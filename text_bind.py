@@ -3,11 +3,12 @@
 """ Concatenate multiple text files """
 
 import os
+import sys
 import argparse
 from tqdm import tqdm
 
 # Create the parser
-parser = argparse.ArgumentParser(description='Program to join multiples text files')
+parser = argparse.ArgumentParser(description='Program to concatenate multiple text files')
 
 # Add the arguments
 parser.add_argument('--type', action='store', dest='type', default='.txt',
@@ -29,12 +30,12 @@ merged_text = arguments.label + arguments.type
 
 # lists if the file exists and decides what to do
 # if file exist exit program
-if os.path.exists(merged_text) and arguments.override == "No":
-    print("Já existe um arquivo com mesmo nome." + "\n" + "Saindo ...")
+if os.path.exists(merged_text) and arguments.override.lower() == "no":
+    print("A file with the same name already exists." + "\n" + "Exiting ...")
     sys.exit()
 
 # if file exist: remove it
-if os.path.exists(merged_text) and arguments.override == "Yes":
+if os.path.exists(merged_text) and arguments.override.lower() == "yes":
     print("Overriding existing " + merged_text + " file... \n")
     os.remove(merged_text)
 
