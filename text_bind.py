@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """ Concatenate multiple text files """
-
+""" """
 import os
 import sys
 import argparse
